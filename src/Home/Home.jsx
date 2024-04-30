@@ -8,6 +8,7 @@ AOS.init();
 
 import 'animate.css';
 import Banner from "./Banner";
+import ExtraSection from "../ExtraPage/ExtraSection";
 
 
 const Home = () => {
@@ -36,6 +37,7 @@ const Home = () => {
                         </CraftItemSection>)
                 }
             </div>
+            <ExtraSection></ExtraSection>
         </div>
     );
 };

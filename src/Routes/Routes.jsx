@@ -53,13 +53,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/update/:id',
-                element: <UpdatePage></UpdatePage>,
+                element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
                 // loader: () => fetch('http://localhost:5000/arts')
             },
             {
                 path: '/craftdetail/:id',
-                element: <CraftItemDetails></CraftItemDetails>,
+                element: <PrivateRoute><CraftItemDetails></CraftItemDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
                 // loader: () => fetch('http://localhost:5000/arts')
             }

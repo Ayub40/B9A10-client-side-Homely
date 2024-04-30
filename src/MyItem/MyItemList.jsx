@@ -43,7 +43,7 @@ const MyItemList = () => {
                     .then((res) => res.json())
                     .then((data) => {
                         console.log(data);
-                        if (data.deleteCount > 0) {
+                        if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your item has been deleted.",
