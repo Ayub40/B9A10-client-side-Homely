@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
 import 'animate.css';
+import Banner from "./Banner";
 
 
 const Home = () => {
@@ -18,7 +19,8 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Home : {artsItems.length} </h2>
+            <Banner></Banner>
+            {/* <h2>Home : {artsItems.length} </h2> */}
             <div>
                 <h1 className='text-center mb-12 font-bold text-5xl'>Craft items </h1>
             </div>
