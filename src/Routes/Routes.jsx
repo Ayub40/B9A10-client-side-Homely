@@ -13,6 +13,7 @@ import CraftItemDetails from "../Pages/CraftItemDetails";
 import AllArtAndCraftItems from "../AllArtAndCraftItems/AllArtAndCraftItems";
 import MyItemList from "../MyItem/MyItemList";
 import PrivateRoute from "../Provider/PrivateRoute";
+// import LandscapePainting from "../Home/LandscapePainting";
 
 
 
@@ -62,7 +63,12 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><CraftItemDetails></CraftItemDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
                 // loader: () => fetch('http://localhost:5000/arts')
-            }
+            },
+            // {
+            //     path: '/landscape/:subcategory_name',
+            //     element: <LandscapePainting></LandscapePainting>,
+            //     loader: () => fetch('http://localhost:5000/crafts')
+            // }
         ]
     },
 ]);

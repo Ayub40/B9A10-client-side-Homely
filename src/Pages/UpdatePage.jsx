@@ -12,7 +12,7 @@ const UpdatePage = () => {
         event.preventDefault();
 
         const form = event.target;
-        const email = form.email.value;
+        // const email = form.email.value;
         const name = form.name.value;
         const item = form.item.value;
         const description = form.description.value;
