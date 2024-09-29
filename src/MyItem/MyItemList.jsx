@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { data } from "autoprefixer";
-import { setItem } from "localforage";
+// import { data } from "autoprefixer";
+// import { setItem } from "localforage";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 // import MyCard from "./MyCard";
@@ -15,7 +15,7 @@ const MyItemList = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myProduct/${user?.email}`)
+        fetch(`https://ak-art-server.vercel.app/myProduct/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -37,7 +37,7 @@ const MyItemList = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/delete/${id}`, {
+                fetch(`https://ak-art-server.vercel.app/delete/${id}`, {
                     method: 'DELETE',
                 })
                     .then((res) => res.json())

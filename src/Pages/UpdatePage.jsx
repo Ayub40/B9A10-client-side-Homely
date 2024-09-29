@@ -39,7 +39,7 @@ const UpdatePage = () => {
 
 
         // send data to the server
-        fetch(`http://localhost:5000/arts/${_id}`, {
+        fetch(`https://ak-art-server.vercel.app/arts/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -27,18 +27,18 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/arts')
+                loader: () => fetch('https://ak-art-server.vercel.app/arts')
             },
             {
                 path: '/allitem',
                 element: <AllArtAndCraftItems></AllArtAndCraftItems>,
-                loader: () => fetch('http://localhost:5000/arts')
+                loader: () => fetch('https://ak-art-server.vercel.app/arts')
             },
             {
                 path: '/myitem',
                 element: <PrivateRoute><MyItemList></MyItemList></PrivateRoute>,
-                // loader: ({ params }) => fetch(`http://localhost:5000/arts/email/${params.email}`)
-                // loader: () => fetch('http://localhost:5000/arts')
+                // loader: ({ params }) => fetch(`https://ak-art-server.vercel.app/arts/email/${params.email}`)
+                // loader: () => fetch('https://ak-art-server.vercel.app/arts')
             },
             {
                 path: '/login',
@@ -55,19 +55,19 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
-                // loader: () => fetch('http://localhost:5000/arts')
+                loader: ({ params }) => fetch(`https://ak-art-server.vercel.app/arts/${params.id}`)
+                // loader: () => fetch('https://ak-art-server.vercel.app/arts')
             },
             {
                 path: '/craftdetail/:id',
                 element: <PrivateRoute><CraftItemDetails></CraftItemDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/arts/${params.id}`)
-                // loader: () => fetch('http://localhost:5000/arts')
+                loader: ({ params }) => fetch(`https://ak-art-server.vercel.app/arts/${params.id}`)
+                // loader: () => fetch('https://ak-art-server.vercel.app/arts')
             },
             // {
             //     path: '/landscape/:subcategory_name',
             //     element: <LandscapePainting></LandscapePainting>,
-            //     loader: () => fetch('http://localhost:5000/crafts')
+            //     loader: () => fetch('https://ak-art-server.vercel.app/crafts')
             // }
         ]
     },

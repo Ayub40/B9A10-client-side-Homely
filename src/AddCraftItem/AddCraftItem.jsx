@@ -36,7 +36,7 @@ const AddCraftItem = () => {
 
 
         // send data to the server
-        fetch('http://localhost:5000/arts', {
+        fetch('https://ak-art-server.vercel.app/arts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

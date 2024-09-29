@@ -12,7 +12,7 @@
 //     const [item, setItem] = useState([]);
 
 //     useEffect(() => {
-//         fetch(`http://localhost:5000/crafts/${subcategory_name}`)
+//         fetch(`https://ak-art-server.vercel.app/crafts/${subcategory_name}`)
 //             .then(res => res.json())
 //             .then(data => {
 //                 console.log(data);

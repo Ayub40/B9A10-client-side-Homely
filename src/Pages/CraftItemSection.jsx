@@ -21,7 +21,7 @@ const CraftItemSection = ({ artsItem, artsItems, setArtsItems }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/arts/${_id}`, {
+                fetch(`https://ak-art-server.vercel.app/arts/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
